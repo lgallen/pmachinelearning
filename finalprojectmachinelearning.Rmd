@@ -80,7 +80,11 @@ predictionsTraining<-predict(modFit,trainingNew)
 confusionMatrix(predictionsTraining,trainingNew$classe)
 ```
 
-After generating predictions for the training set, the confusion matrix revealed perfect prediction accuracy (Accuracy=1) with respect to the training set. While this is encouraging, there is always going to be some overfitting that occurs with the training set, and this is likely reflected in this number. Consequently, I now ran predictions and found a confusion matrix for the cross validation test set that I had created.
+After generating predictions for the training set, the confusion matrix revealed perfect prediction accuracy (Accuracy=1) with respect to the training set. 
+
+## Estimating Error with Cross Validation
+
+While this is encouraging, there is always going to be some overfitting that occurs with the training set, and this is likely reflected in this number. Consequently, I now ran predictions and found a confusion matrix for the cross validation test set that I had created.
 
 ```{r,cache=TRUE}
 predictionsTesting<-predict(modFit,testingNew)
